@@ -4,10 +4,10 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
-const PORT = 5000; // Backend server port
+const PORT = process.env.PORT || 5000; // Use dynamic port for Render
 
 // Middleware
-app.use(cors({ origin: "http://localhost:3000" })); // Allow requests from React frontend
+app.use(cors({ origin: "https://playful-pony-1ceb0f.netlify.app" })); // Allow requests from your Netlify frontend
 app.use(bodyParser.json());
 
 // MongoDB Connection
